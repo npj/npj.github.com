@@ -1,1 +1,9 @@
+---
+layout: main
+title: This Is The "This Is The 'This Is My Blog' Blog" Blog
+---
 <h1>Testing GitHub Pages</h1>
+
+{% for post in site.posts %}
+  <a href="{{post.url}}">{{ post.title }}</a>
+{% endfor %}
