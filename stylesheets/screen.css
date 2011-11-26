@@ -1,8 +1,154 @@
-body {
-  font-family: Verdana;
-  font-size: 10px;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.cmd {
+  background-color: #ddd;
+  font-weight: bold;
+  padding: 0px 5px;
+}
+
+html, body {
+  font-family: "courier";
+  font-size: 14px;
+  color: #444;
+}
+
+#site {
+  background-color: #fff;
+  width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+#site p {
+  margin: 15px 0px;
+}
+
+#site p.intro {
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+#header h1 {
+  font-size: 90px;
+  color: #666;
+  height: auto;
+}
+
+#header .prompt {
+  margin-right: 30px;
+  float: left;
+  width: 54px;
+  color: #0ae;
+}
+
+#content {
+  line-height: 25px;
+  min-height: 400px;
+}
+
+#content h2 {
+  color: #666;
+}
+
+#footer {
+  font-size: 12px;
+  width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+#footer .content {
+  background-color: #eee;
+  border: 1px solid #ddd;
+  padding: 10px;
+  height: 18px;
+  border-radius: 5px;
+}
+
+#footer .links {
+  float: left;
+}
+
+#footer .copy {
+  float: right;
+}
+
+hr.sep {
+  width: 200px;
+  margin: 40px auto;
+  border: 1px solid #ddd;
+}
+
+#content ul {
+  margin-left: 18px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#content ul li {
+  
+}
+
+ul.index {
+  margin-left: 0px;
+  list-style-position: inside;
+  list-style-type: none;
+}
+
+ul.index li {
+  margin: 3px 0px;
+}
+
+li .number {
+  color: #999;
+  margin-right: 5px;
+  float: left;
+}
+
+#site a:link, #site a:visited {
+  color: #0ae;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.title {
+  color: #0ae;
+}
+
+#site a:hover {
+  color: #aaa;
+}
+
+#site p.indent {
+  text-indent: 2em;
+}
+
+#site p .title {
+  color: #444;
+  font-weight: bold;  
 }
 
 .highlight {
-  font-size: 12pt;
+  font-size: 10pt;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin: 0 auto;
+  width: 600px;
+  line-height: 20px;
+}
+
+.highlight pre {
+  padding: 10px;
+}
+
+.highlight .lineno { 
+  color: #aaa; 
 }

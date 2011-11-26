@@ -1,9 +1,13 @@
 ---
 layout: main
-title: This Is The "This Is The 'This Is My Blog' Blog" Blog
 ---
-<h1>Testing GitHub Pages</h1>
-
-{% for post in site.posts %}
-  <a href="{{post.url}}">{{ post.title }}</a>
-{% endfor %}
+<p class="intro noindent">
+  Hello! My name is <span class="term">Peter</span> and I would like to teach you to program.
+</p>
+<hr class="sep" />
+<ul class="index">
+  {% for post in site.posts reversed %}
+    <li><div class="number">{{ forloop.index0 }}.</div><a href="{{post.url}}">{{ post.title }}</a></li>
+  {% endfor %}
+  <li><div class="number">1.</div><em>Coming soon...</em></li>
+</ol>
