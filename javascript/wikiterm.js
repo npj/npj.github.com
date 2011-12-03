@@ -1,9 +1,12 @@
 $(document).ready(function() {
   var WikiTerms = function() {
     var special = {
-      c   : "C_(programming_language)",
-      gcc : "GNU_Compiler_Collection",
-      vim : "vim_(text_editor)"
+      c            : "C_(programming_language)",
+      gcc          : "GNU_Compiler_Collection",
+      vim          : "vim_(text_editor)",
+      program      : "Computer_program",
+      instruction  : "Instruction_(computer_science)",
+      instructions : "Instruction_(computer_science)"
     };
 
     this.wikify = function() {
