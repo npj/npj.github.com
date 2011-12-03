@@ -7,6 +7,10 @@
   font-weight: bold;
 }
 
+.term {
+  font-weight: bold;
+}
+
 .cmd {
   background-color: #ddd;
   font-weight: bold;
@@ -17,6 +21,7 @@ html, body {
   font-family: "courier";
   font-size: 14px;
   color: #444;
+  text-align: justify;
 }
 
 #site {
@@ -136,7 +141,7 @@ li .number {
 
 .highlight {
   font-size: 10pt;
-  background-color: #fff;
+  background-color: #eee;
   border-radius: 5px;
   border: 1px solid #ddd;
   margin: 0 auto;
@@ -146,6 +151,10 @@ li .number {
 
 .highlight pre {
   padding: 10px;
+}
+
+.highlight code.console span {
+  white-space: normal;
 }
 
 .highlight .lineno { 
