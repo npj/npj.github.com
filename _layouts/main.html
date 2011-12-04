@@ -3,6 +3,7 @@
 <html>
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <link rel="alternate" type="application/atom+xml" href="feed.xml" title="Feed">
     <link rel="stylesheet" href="/stylesheets/syntax.css" type="text/css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="/stylesheets/screen.css" type="text/css" media="screen" charset="utf-8">
     <script src="/javascript/jquery-1.7.min.js" type="text/javascript" charset="utf-8"></script>
@@ -19,9 +20,11 @@
       <div id="footer">
         <div class="content">
           <div class="links">
-            char *<strong>links</strong> = {
-              <!-- &quot;<a href="">About</a>&quot;, -->
-              &quot;<a href="mailto:peter.brindisi+cc@gmail.com">Contact</a>&quot;
+            char *<strong>links</strong>[3] = {
+              <!-- &quot;<a href="">about</a>&quot;, -->
+              &quot;<a href="mailto:peter.brindisi+cc@gmail.com">contact</a>&quot;,
+              &quot;<a href="feed.xml" target="_blank">feed</a>&quot;,
+              &quot;<a href="http://www.twitter.com/cisforcode" target="_blank">@cisforcode</a>&quot;
             };
           </div>
           <div class="copy">

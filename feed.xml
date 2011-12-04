@@ -1,0 +1,27 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://npj.github.com/</id>
+  <title>C is for Code</title>
+  <link type="application/atom+xml" href="http://npj.github.com/feed.xml" rel="self" />
+  <link href="http://npj.github.com/" />
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <author>
+    <name>Peter Brindisi</name>
+    <email>peter.brindisi+cc@gmail.com</email>
+  </author>
+  {% for post in site.posts %}
+    <entry>
+      <id>http://npj.github.com{{ post.url }}</id>
+      <title>{{ post.title }}</title>
+      <link href="http://npj.github.com{{ post.url }}" />
+      <updated>{{ post.date | date_to_xmlschema }}</updated>
+      <author>
+        <name>Peter Brindisi</name>
+        <url>http://npj.github.com</url>
+      </author>
+    </entry>
+  {% endfor %}
+</feed>
