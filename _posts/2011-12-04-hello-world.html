@@ -18,7 +18,7 @@ title: Hello, World!
 {% endhighlight %}
 <p>
   With your new, amazing <a class="wikiterm">text editor</a> of choice, type the above and save the file as 
-  <span class="term">hello.c</span>. I have purposefully left the line numbers in the code to make it more difficult 
+  <span class="file">hello.c</span>. I have purposefully left the line numbers in the code to make it more difficult 
   for you to copy and paste the examples. Hee. I have always found that typing out examples myself helps me remember them
   better. Besides, typing code is kind of like playing piano: the more you practice, the better you get. Consider this
   an exercise to bring you and your <a class="wikiterm">text editor</a> closer together.
@@ -35,14 +35,14 @@ title: Hello, World!
   directly. It is too high-level. Expecting a computer to directly execute <a class="wikiterm">source code</a> is like trying to train your dog to drive a car
   by calmly sitting him down and explaining how to do it. It just isn't going to work. Your dog only understands a small 
   set of extremely simple <a class="wikiterm">instructions</a>. Sit. Stay. Fetch. Drive. (Lol, I'm just kidding about that 
-  last one. Can you imagine? A driving dog!) But <span class="term">you</span> can understand this high-level language. At least you will be able to if you
+  last one. Can you imagine? A driving dog!) But <em>you</em> can understand this high-level language. At least you will be able to if you
   continue to read these posts. It is the compiler's one and only task to translate this high-level, human-readable language
   into something your computer can understand: a long series of very simple, <a class="wikiterm">binary code</a> 
   <a class="wikiterm">instructions</a>.
 </p>
 <p class="indent">
   Now that you understand what <a class="wikiterm">source code</a> is a little better, you can imagine programming in
-  <a class="wikiterm">C</a> as <span class="term">telling the compiler what to translate so your computer does what you 
+  <a class="wikiterm">C</a> as <span class="def">telling the compiler what to translate so your computer does what you 
   want</span>.
 </p>
 <h3>Let's Try It!</h3>
@@ -53,17 +53,23 @@ title: Hello, World!
   anything, it means you probably typed something incorrectly, or the file is not actually where you think it is on your computer.)
 </p>
 <p class="indent">
-  So what happened? The <a class="wikiterm">compiler</a> took your <span class="term">hello.c</span> file and turned it into
+  So what happened? The <a class="wikiterm">compiler</a> took your <span class="file">hello.c</span> file and turned it into
   an <a href="" class="wikiterm" data-url="executable">executable file</a> named <span class="term">a.out</span>. This is something
   your computer can understand. Let's run it! Type <span class="cmd">./a.out</span> in your console. You should see a single line of
-  output that reads <span class="term">Hello, World!</span>, and your console should be ready for the next command. <span class="term">Cool</span>.
+  output:
+</p>
+{% highlight console %}
+Hello, World!
+{% endhighlight %}
+<p>
+  Then your console should be ready for the next command. <em>Cool</em>.
 </p>
 <p class="indent">
-  Before we get into how this program works, let's note that <span class="term">a.out</span> is a pretty terrible name for an
+  Before we get into how this <a class="wikiterm">program</a> works, let's note that <span class="term">a.out</span> is a pretty terrible name for an
   <a class="wikiterm">executable</a>. Let's <span class="term">recompile</span> the program to give us a differently-named
   file. Type <span class="cmd">gcc -o hello hello.c</span>. This command tells the compiler to create an <a class="wikiterm">executable</a>
   named <span class="term">hello</span>. Run it by typing <span class="cmd">./hello</span>. You should see the exact same result as
-  when you ran <span class="cmd">./a.out</span>. <span class="term">Rad</span>.
+  when you ran <span class="cmd">./a.out</span>. <em>Rad</em>.
 </p>
 <h3><a name="how_it_works">How Does It Work?</a></h3>
 <p class="indent">
@@ -87,15 +93,15 @@ title: Hello, World!
   But what is that weird &quot;<span class="se">\n</span>&quot;, you ask? Excellent question, my highly intelligent and beautiful 
   imaginary pupil! &quot;<span class="se">\n</span>&quot; is a <span class="term">special character</span>. The &quot;<span class="se">\</span>&quot;
   in front of the &quot;<span class="se">n</span>&quot; tells the <a class="wikiterm">compiler</a> to interpret the &quot;<span class="se">\</span>&quot;
-  plus the character immediately after as a <strong>single</strong> character. Specifically, &quot;<span class="se">\n</span>&quot;
-  is the <a class="wikiterm">newline character</a>. When your computer sees this character, rather than printing something visible, it
-  starts a new line. In our example, this has the courteous effect of returning us to the <a class="wikiterm">command prompt</a>. Try
+  plus the character immediately after as a <em>single</em> character. Specifically, &quot;<span class="se">\n</span>&quot;
+  is the <span class="term">newline character</span>. When your computer sees this character, rather than printing something visible, it
+  starts a new line. In our example, this has the courteous effect of returning us to the command prompt. Try
   removing the &quot;<span class="se">\n</span>&quot;, then <span class="term">recompile</span> with <span class="cmd">gcc -o hello hello.c</span> and execute <span class="cmd">./hello</span>.
   Just look at what chaos and havoc you have wrought.
 </p>
 <p class="indent">
-  Last but not least, there is a <strong>semicolon</strong> after the call to <span class="c">printf</span>. In <a class="wikiterm">C</a>,
-  all <span class="term">statements</span> end with a <strong>semicolon</strong>. Get used to knowing <strong>exactly</strong> where to find it on your keyboard. 
+  Last but not least, there is a semicolon after the call to <span class="c">printf</span>. In <a class="wikiterm">C</a>,
+  all <span class="term">statements</span> end with a semicolon. Get used to knowing <em>exactly</em> where to find it on your keyboard. 
   It's how the <a class="wikiterm">compiler</a> knows the <span class="term">statement</span> is complete. 
   With more practice, the distinction between what is a <span class="term">statement</span> and what is not will become more clear.
 </p>
@@ -106,20 +112,20 @@ title: Hello, World!
 <p class="indent">
   Now you know a little bit about how the <span class="c">printf</span> <span class="term">function</span> works. As you 
   can probably imagine, this will be quite useful in the coming years of your life as a 1337 h4x0r. But let's take a 
-  look at all of that other stuff in the code. After all, there are 5 lines, not just 1. We didn't type all
-  that extra stuff because it was fun. In line 1, <span class="cp">#include</span> is a <span class="term">compiler directive</span>.
-  This tells the <a class="wikiterm">compiler</a> to do something <strong>before</strong> it begins compiling the the
-  rest of the code. This part of the compilation process is often called the <a class="wikiterm">precompiler</a>. 
+  look at all of that other stuff in the code. After all, there are 5 lines, not just 1. We didn't type it all
+  because it was fun. In line 1, <span class="cp">#include</span> is a <span class="term">compiler directive</span>.
+  This tells the <a class="wikiterm">compiler</a> to do something <em>before</em> it begins compiling the the
+  rest of the code. This part of the compilation process is often called the <a class="wikiterm">preprocessor</a>. 
   Line 1 of our program tells the <a class="wikiterm">compiler</a> to use the specified file name, <span class="cp">&lt;stdio.h&gt;</span>,
   and to continue compilation as if the entire contents of that file were directly copied and
-  pasted into the original <a class="wikiterm">source code</a>. The file <strong>stdio.h</strong> also contains 
+  pasted into the original <a class="wikiterm">source code</a>. The file <span class="file">stdio.h</span> also contains 
   <a class="wikiterm">source code</a>: it is primarily a long list of <span class="term">function declarations</span>, 
   one of which is our good friend, <span class="c">printf</span>. We'll talk more about <span class="term">function declarations</span> 
   in the coming lessons, but for now, just know that if you write <span class="c">printf</span> somewhere in your code without 
   <span class="cp">#include &lt;stdio.h&gt;</span>, the <a class="wikiterm">compiler</a> isn't sure what the hell you're talking about.
 </p>
 <p class="indent">
-   In fact, let's try it: remove line 1 from <strong>hello.c</strong>, and recompile. You should see something like the
+   In fact, let's try it: remove line 1 from <span class="file">hello.c</span>, and recompile. You should see something like the
    following:
 </p>
 {% highlight console %}
@@ -130,9 +136,9 @@ hello.c:2: warning: incompatible implicit declaration of built-in function ‘pr
   This is a <span class="term">compiler warning</span>. The <a class="wikiterm">compiler</a> still made you an
   <a class="wikiterm">executable file</a>, but it's trying to tell you that there's something you should
   really look into. In this particular case, it's telling you that you're trying to use <span class="c">printf</span>
-  without declaring it first (more on this in the coming lessons). Let's go back and re-add the line you just took out, and recompile.
+  without <span class="term">declaring</span> it first (more on this in the coming lessons). Let's go back and re-add the line you just took out, and recompile.
   Now everything is peachy. In fact, let's go one step further. Recompile with this command: <span class="cmd">gcc -Wall -o hello hello.c</span>.
-  You should see no output. This tells you that everything is <strong>super peachy</strong>, as the <span class="cmd">-Wall</span>
+  You should see no output. This tells you that everything is <em>super peachy</em>, as the <span class="cmd">-Wall</span>
   flag tells <a class="wikiterm">gcc</a> to give you every possible warning in your code. From now on, we will always compile using the <span class="cmd">-Wall</span> flag
   and your goal will be to produce code that gives you absolutely no warnings. 
 </p>
@@ -145,7 +151,7 @@ hello.c:2: warning: incompatible implicit declaration of built-in function ‘pr
   For now, all you need to know is that this is the entry-point into our program. This tells your <a class="wikiterm">operating system</a> where to start
   when you run your program. All of your <a class="wikiterm">C</a> programs will have a <span class="term">function definition</span> for <span class="nf">main</span>.
   With the following we're getting a little bit ahead of ourselves, but this <span class="term">function definition</span> tells us that <span class="nf">main</span>
-  takes no arguments and returns an <span class="kt">int</span>.
+  takes no <span class="term">arguments</span> and <span class="term">returns</span> an <span class="kt">int</span>.
 </p>
 <h3>Line 3</h3>
 <p class="indent">
@@ -158,7 +164,7 @@ hello.c:2: warning: incompatible implicit declaration of built-in function ‘pr
 <p class="indent">
   This is a <span class="term">return statement</span>. Again, more on this in the coming lessons, but in the context of
   whatever <span class="term">function</span> you're defining, this specifies what output value the <span class="term">function</span> will produce, if any. Here,
-  we're returning an output value to the <a class="wikiterm">operating system</a>. Specifically, a <span class="term">return value</span>
+  we're <span class="term">returning</span> an output value to the <a class="wikiterm">operating system</a>. Specifically, a <span class="term">return value</span>
   of <span class="mi">0</span> from <span class="nf">main</span> tells the <a class="wikiterm">operating system</a>, 
   "Everything went well. We're all done here."
 </p>
@@ -171,11 +177,11 @@ hello.c:2: warning: incompatible implicit declaration of built-in function ‘pr
   program would contain a <span class="term">syntax error</span>. Basically, this means that there is a problem
   with our <a class="wikiterm">source code</a> that prevents the <a class="wikiterm">compiler</a> from correctly reading it. If your code contains a
   <span class="term">syntax error</span>, the <a class="wikiterm">compiler</a> will not give you an <a class="wikiterm">executable file</a>.
-  Let's try it and see what happens. But first, let's get rid of your current <strong>hello</strong> executable. Type
+  Let's try it and see what happens. But first, let's get rid of your current <span class="file">hello</span> executable. Type
   <span class="cmd">rm hello</span>. Just to make sure it's gone, use the <span class="cmd">ls</span> command if you're
   comfortable with that (you're going to have to learn these UNIX commands at some point), or simply try to execute
   <span class="cmd">./hello</span>. You should see something like &quot;No such file or directory&quot;.
-  Now, edit your <strong>hello.c</strong> file, and remove line 5. Recompile (<span class="cmd">gcc -Wall -o hello hello.c</span>),
+  Now, edit your <span class="file">hello.c</span> file, and remove line 5. Recompile (<span class="cmd">gcc -Wall -o hello hello.c</span>),
   and you should see this:
 </p>
 {% highlight console %}
@@ -183,7 +189,7 @@ hello.c: In function ‘main’:
 hello.c:4: error: expected declaration or statement at end of input
 {% endhighlight %}
 <p>
-  This is a <strong>compiler error</strong>. As you might have guessed, these can be fairly cryptic. Learning to
+  This is a <span class="term">compiler error</span>. As you might have guessed, these can be fairly cryptic. Learning to
   understand these will eventually become second-nature. For now, this one is basically the <a class="wikiterm">compiler</a>
   saying, &quot;Aww turds. I got all the way to the end of the input, and something isn't right. Bail.&quot; Now type <span class="cmd">ls hello</span>.
 </p>
@@ -191,8 +197,8 @@ hello.c:4: error: expected declaration or statement at end of input
 ls: hello: No such file or directory
 {% endhighlight %}
 <p>
-  Whoops. There's no <a class="wikiterm">executable file</a>. This means we <strong>really</strong> have to fix the <a class="wikiterm">source code</a>.
-  Go back, replace the <span class="p">}</span>, and recompile. Once again, everything is right with the world, and typing
+  Whoops. There's no <a class="wikiterm">executable file</a>. This means we <em>really</em> have to fix the <a class="wikiterm">source code</a>.
+  Go back, replace the &quot;<span class="p">}</span>&quot;, and recompile. Once again, everything is right with the world, and typing
   <span class="cmd">ls hello</span> in our console shows us this:
 </p>
 {% highlight console %}
@@ -203,8 +209,8 @@ hello
 </p>
 <h3>Until Next Time</h3>
 <p class="indent">
-  That's all for now! Until the next lesson, try playing around with <strong>hello.c</strong>. Add some <strong>newline characters</strong>
-  to the <strong>string</strong> passed to <span class="c">printf</span>. Add more calls to <span class="c">printf</span>. Remove the
+  That's all for now! Until the next lesson, try playing around with <span class="file">hello.c</span>. Add some <span class="term">newline characters</span>
+  to the <span class="term">string</span> passed to <span class="c">printf</span>. Add more calls to <span class="c">printf</span>. Remove the
   semicolon after the call to <span class="c">printf</span> to see what happens when you forget one. 
   Remove the <span class="term">return statement</span>. Try all sorts of crazy crap. Next time, we're actually going
   to do something cool, so get some practice time in with your <a class="wikiterm">text editor</a> and <a class="wikiterm">gcc</a>!

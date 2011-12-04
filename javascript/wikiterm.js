@@ -6,7 +6,8 @@ $(document).ready(function() {
       vim          : "vim_(text_editor)",
       program      : "Computer_program",
       instruction  : "Instruction_(computer_science)",
-      instructions : "Instruction_(computer_science)"
+      instructions : "Instruction_(computer_science)",
+      preprocessor : "C_preprocessor"
     };
 
     this.wikify = function() {
