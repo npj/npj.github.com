@@ -16,6 +16,7 @@ layout: nil
     <entry>
       <id>http://npj.github.com{{ post.url }}</id>
       <title>{{ post.title }}</title>
+      <content type="html">{{ post.content | xml_escape }}</content>
       <link href="http://npj.github.com{{ post.url }}" />
       <updated>{{ post.date | date_to_xmlschema }}</updated>
       <author>
