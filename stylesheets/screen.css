@@ -3,11 +3,7 @@
   padding: 0;
 }
 
-.bold {
-  font-weight: bold;
-}
-
-.term {
+.bold, .term, .file {
   font-weight: bold;
 }
 
